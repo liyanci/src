@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../lib/jquery-1.10.1.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<input type="button" name="add" id="add" value="添加数据" />
+	</body>
+	<script type="text/javascript">
+		$('#add').click(function(){
+			$.ajax({
+				type:"get",
+				url:"../api/insert.php",
+				async:true,
+				success:function(str){
+					console.log(str);
+				}
+			});
+		})
+	</script>
+</html>

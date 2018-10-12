@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../lib/jquery-1.10.1.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<input type="button" name="del" id="del" value="删除" />
+	</body>
+	<script type="text/javascript">
+		$('#del').click(function(){
+			$.ajax({
+				type:"get",
+				url:"../api/delete.php",
+				async:true,
+				data:{
+					'id':2
+				},
+	    		success:function(str){
+	    			console.log(str);
+	    		}
+			});
+		})
+	</script>
+</html>

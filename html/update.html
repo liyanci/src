@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../lib/jquery-1.10.1.min.js" type="text/javascript" charset="utf-8"></script>
+		
+	</head>
+	<body>
+		<input type="button" name="update" id="update" value="更新数据" />
+	</body>
+</html>
+<script type="text/javascript">
+	$('#update').click(function(){
+		$.ajax({
+			type:"get",
+			url:"../api/update.php",
+			async:true,
+			success:function(str){
+				console.log(str);
+			}
+		});
+	})
+</script>

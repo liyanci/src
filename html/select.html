@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../lib/jquery-1.10.1.min.js" type="text/javascript" charset="utf-8"></script>
+
+	</head>
+
+	<body>
+		<input type="button" name="select" id="select" value="查数据" />
+		<ul id="ul1">
+			<!--<li></li>-->
+		</ul>
+	</body>
+	<script type="text/javascript">
+		$('#select').click(function(){
+			$.ajax({
+				type:"get",
+				url:"../api/select.php",
+				async:true,
+				success:function(str){
+//					console.log(str);
+					var data=JSON.parse(str);
+					var html='';
+					for(var i=0;i<data.length;i++){
+						html+='<li>'+data[i].username+'</li>';
+					};
+					$('#ul1').html(html);
+				}
+			});
+		})
+	</script>
+</html>

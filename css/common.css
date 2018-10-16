@@ -272,3 +272,6 @@ body {
 #s_footer .s_foot_info .foot_img a img {
   height: 40px;
 }
+#s_footer a:hover{
+	color: #F19108;
+}

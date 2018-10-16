@@ -1,0 +1,115 @@
+html,
+body {
+  width: 100%; }
+
+#r_head {
+  height: 70px;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8); }
+  #r_head .container {
+    height: 70px;
+    display: flex; }
+    #r_head .container div {
+      flex: 1; }
+    #r_head .container .r_head_r {
+      text-align: right;
+      line-height: 70px;
+      font-size: 12px; }
+      #r_head .container .r_head_r a {
+        color: #999;
+        display: inline-block;
+        padding-left: 20px; }
+      #r_head .container .r_head_r a:hover {
+        color: #F5A222; }
+
+#r_content {
+  height: 780px;
+  box-sizing: border-box;
+  /*box-shadow: 3px 3px 3px #1A191E;*/
+  background: #fdf8f4 url(../img/login_03.jpg) no-repeat 80px -70px; }
+  #r_content .regBox {
+    box-shadow: 0px 0px 10px 2px #ccc;
+    float: right;
+    margin-top: 110px;
+    width: 310px;
+    padding: 30px 35px;
+    background: #fff; }
+    #r_content .regBox .tabBox .yaoqing {
+      height: 40px;
+      line-height: 40px;
+      position: relative; }
+      #r_content .regBox .tabBox .yaoqing input {
+        width: 12px; }
+      #r_content .regBox .tabBox .yaoqing span {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 20px;
+        font-size: 12px;
+        color: #1A191E; }
+    #r_content .regBox .tabBox .reg_top {
+      width: 310px;
+      height: 40px; }
+      #r_content .regBox .tabBox .reg_top span {
+        width: 60px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 12px;
+        color: #666; }
+      #r_content .regBox .tabBox .reg_top p {
+        width: 240px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 12px;
+        text-align: right;
+        font-weight: bold;
+        color: red; }
+      #r_content .regBox .tabBox .reg_top #r_username {
+        font-size: 14px;
+        color: #999;
+        font-weight: normal; }
+    #r_content .regBox .tabBox .highlight {
+      box-shadow: 0px 0px 3px red; }
+    #r_content .regBox .tabBox input {
+      width: 298px;
+      height: 20px;
+      line-height: 20px;
+      padding: 10px 5px;
+      border: 1px solid #dedede;
+      font-weight: bold;
+      font-size: 14px; }
+    #r_content .regBox .tabBox .reg_b #reg {
+      width: 310px;
+      height: 50px;
+      background: #f19108;
+      color: #fff;
+      cursor: pointer;
+      font-size: 16px;
+      margin-bottom: 10px;
+      margin-top: 10px; }
+    #r_content .regBox .tabBox .reg_b label {
+      height: 20px;
+      line-height: 20px;
+      color: #999;
+      font-size: 12px; }
+      #r_content .regBox .tabBox .reg_b label #agree {
+        width: 13px;
+        margin-right: 5px; }
+    #r_content .regBox .tabBox .reg_b span {
+      height: 20px;
+      line-height: 20px;
+      color: #999;
+      font-size: 12px;
+      cursor: pointer; }
+    #r_content .regBox .tabBox .reg_b p {
+      height: 40px;
+      line-height: 80px;
+      color: #999;
+      font-size: 12px; }
+      #r_content .regBox .tabBox .reg_b p a {
+        color: #F19108; }
+
+#s_footer {
+  margin-top: 0px; }
+
+/*# sourceMappingURL=reg.css.map */

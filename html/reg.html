@@ -3,7 +3,125 @@
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/base.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/reg.css"/>
+		<script src="../js/ajax.js" type="text/javascript" charset="utf-8"></script>
+		
+		<script src="../lib/jquery-1.10.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			
+		</style>
 	</head>
 	<body>
+		<div id="r_head">
+			<div class="container">
+				<div class="r_head_l"><img src="../img/logo.png"/></div>
+				<div class="r_head_r">
+					<a href="../index.html">寺库首页</a>
+					<a href="#" id="shoucang">收藏寺库</a>
+					<a href="#">寺库APP</a>
+				</div>
+			</div>
+		</div>
+		<div id="r_content">
+			<div class="container">
+				<div class="regBox">
+					<div class="tabBox">
+						<ul class="clearfix">
+							<li>
+								<div class="reg_top">
+									<span>用户名</span>
+									<p id="r_username" class="fr">请输入手机号或者邮箱</p>
+								</div>
+								<input type="text" name="reg_one" id="reg_one" value="" autocomplete="off"/>
+							</li>
+							<li>
+								<div class="reg_top">
+									<span>密码</span>
+									<p id="r_password" class="fr"></p>
+								</div>
+								<input type="password" name="reg_two" id="reg_two" value="" autocomplete="off"/>
+							</li>
+							<li>
+								<div class="reg_top">
+									<span>确认密码</span>
+									<p id="r_confirm" class="fr"></p>
+								</div>
+								<input type="password" name="reg_one" id="reg_three" value="" autocomplete="off" />
+							</li>
+							<li class="yaoqing">
+								<input type="checkbox" name="yaoqingma" id="yaoqingma" value="" />
+								<span>贵宾邀请码</span>
+							</li>
+							
+						</ul>
+						<div class="reg_b">
+							<input type="button" name="reg" id="reg" value="立即注册" />
+							<label id="agreement"><input type="checkbox" name="" id="agree" value="" checked="checked" />我已阅读并同意</label>
+							<span>《寺库网用户注册协议》</span>
+							<p>已经是寺库会员？<a href="login.html">立即登录</a></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="s_footer">
+			<div class="container">
+				<ul>
+					<li>
+						<a href="">新手指南</a>
+						<a href="">付款方式</a>
+						<a href="">物流配送</a>
+						<a href="">售后服务</a>
+					</li>
+					<li>
+						<a href="">寺库微博</a>
+						<a href="">友情链接</a>
+						<a href="">奢侈品热词</a>
+						<a href="">寺库国际站</a>
+					</li>
+					<li>
+						<a href="">加入寺库</a>
+						<a href="">联系我们</a>
+						<a href="">关于寺库</a>
+						<a href="">帮助中心</a>
+					</li>
+					<li>
+						<a href="">寺库奢侈品养护</a>
+						<a href="">寺库招商</a>
+						<a href="">Investors</a>
+
+					</li>
+				</ul>
+				<div class="s_foot_info">
+					<p class="clearfix">
+						<span>
+							<a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010102001392">
+								<img src="../img/pcfooterbatb.png"/>京公安备11010102001392
+							</a>
+						</span>
+						<span>京ICP证110119号 京ICP备09084709号-3</span>
+						<span><a href="http://www.secoo.com/listTop/180712_zlgl.shtml">ISO9001中国质量管理体系认证</a></span>
+						<span><a href="http://www.secoo.com/listTop/180712_publication.shtml">出版物经营许可证</a></span>
+						<span><a href="http://www.secoo.com/listTop/180712_foodBlicense.shtml">食品经营许可证</a></span>
+					</p>
+					<p class="clearfix">
+						<span>京B2-20181305</span>
+						<span>京食药网食备201810026</span>
+						<span>客服电话：400-875-6789</span>
+						<span>COPYRIGHT © 2010-2018 北京寺库商贸有限公司 版权所有</span>
+					</p>
+					<p class="foot_img clearfix">
+						<a href="http://www.secoo.com/listTop/180712_businessLicense.shtml"><img src="../img/f_01.jpg" /></a>
+						<a href="//ss.knet.cn/verifyseal.dll?sn=e16051911010263532a4zi000000&amp;a=1&amp;pa=0.6321878711618679"><img src="../img/cnnic.png" /></a>
+						<a href="http://search.szfw.org/cert/l/CX20141231006253006352"><img src="../img/kexin.jpg" /></a>
+						<a href="http://www.bj.cyberpolice.cn/index.do#"><img src="../img/f_03.jpg" /></a>
+					</p>
+				</div>
+			</div>
+		</div>
 	</body>
 </html>
+<script src="../js/reg.js" type="text/javascript" charset="utf-8"></script>
+

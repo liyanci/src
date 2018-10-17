@@ -1,0 +1,265 @@
+#g_list {
+    background: #ededed;
+    position: relative;
+    .list_shoushi,
+    .list_xiangshi,
+    .list_xianglian {
+        z-index: 1;
+        display: none;
+        width: 1200px;
+//      height: 400px;
+        background: #fff;
+        padding: 30px;
+        padding-bottom: 0;
+        position: absolute;
+        left: 70px;
+        top: 55px;
+//      box-shadow: 0px 0px 3px 1px #DEDEDE;
+        a {
+            display: inline-block;
+            width: 100px;
+            font-size: 12px;
+            margin-bottom: 30px;
+            color: #666;
+        }
+        a:hover{
+            text-decoration: underline;
+        }
+    }
+    .g_list_one {
+        position: relative;
+        padding: 25px 0 16px 0;
+        .ss {
+            font-size: 12px;
+            color: #666;
+            margin: 10px;
+            width: 40px;
+            height: 20px;
+            line-height: 20px;
+            display: inline-block;
+            text-align: center;
+            z-index: 100;
+            //          float: left;
+        }
+        .ss:hover {
+            color: #e93b39;
+            background: #fff;
+                        z-index: 100;
+
+        }
+    }
+}
+
+.g_list_two_t{
+    min-height: 46px;
+}
+.g_list_two_t_l{
+    width: 45px;
+    height: 50px;
+    font-size: 12px;
+    padding-left: 30px;
+    background: #f5f5f5;
+    padding-top: 20px;
+    color: #666;
+}
+.g_list_two_t_r{
+    width: 1125px;
+//  height: 70px;
+    background: #fff;
+    font-size: 12px;
+    padding-top:20px ;
+    padding-bottom: 2px;
+    border-bottom: 1px dashed #ededed;
+    a{
+        display: inline-block;
+        width: 200px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin-bottom: 5px;
+        margin-left: 20px;
+        color: #666;
+    }
+    a:hover{
+        color: #e93b39;
+    }
+}
+.g_list_three{
+    margin-top: 30px;
+    .container{
+        background: #fff;
+    }
+    .product_title{
+        .hong{
+            color: #e93b39;
+        }
+        div{
+            
+            height: 29px;
+            padding: 0 30px;
+            font-size: 18px;
+            padding-top: 9px;
+        }
+        .shangcheng{
+            border-top: 2px solid #e93b39;
+        }
+    }
+    .product_px{
+        padding:10px 30px 0;
+        background: #f5f5f5;
+        .product_px_one{
+            height: 34px;
+            a{
+                font-size: 12px;
+                display: inline-block;
+                width: 45px;
+                height: 22px;
+                line-height: 22px;
+                text-align: center;
+                background: #fff;
+                color: #666;
+                
+            }
+            .on{
+                background: #E93B39;
+                border-color: #E93B39;
+                color: #fff;
+                i{
+                    background: url(../img/search_icon3.png) 2px -193px!important;
+                }
+            }
+        }
+        
+        i{
+            width: 12px;
+            height: 12px;
+            line-height: 20px;
+            display:inline-block ;
+            vertical-align: middle;
+        }
+    }
+    .product_list{
+        padding:30px 20px 2px;
+        background: #fff;
+        
+        
+        dl{
+            width:240px;
+            height: 360px;
+//          background: red;
+            margin: 0 25px 56px 25px;
+            float: left;
+//          box-sizing: border-box;
+            position: relative;
+            .goods{
+                background: #fff;
+                #addCar_shoucang{
+                    height: 30px;
+                    width: 240px;
+                    position:absolute;
+                    top: 340px;
+                    left:12px;
+                    #addCar{
+                        cursor: pointer;
+                        width:80px;
+                        height: 25px;
+                        background: #E93B39;
+                        color: #fff;
+                        font-size: 12px;
+                        line-height: 25px;
+                        text-align: center;
+                    }
+                    #shoucang{
+                        cursor: pointer;
+                        position: absolute;
+                        right: 10px;
+                        top: 4px;
+                        font-size: 12px;
+                        color:#666 ;
+                        i{
+                            background: url(../img/search_icon3.png);
+                        }
+                    }
+                }
+                .price{
+                    position: absolute;
+                    top: 305px;
+                    left: 10px;
+                    span{
+                        font-size: 12px;
+                        font-weight: bold;
+                    }
+                }
+                .name{
+                    position: absolute;
+                    top: 270px;
+                    left: 15px;
+                    p{
+                        width: 240px;
+                        font-size: 12px;
+                        color:#666;
+                        cursor: pointer;
+                    }
+                    p:hover{
+                        text-decoration: underline;
+                    }
+                }
+                .tips{
+                    border-bottom: 1px solid #ccc;
+                    position:absolute;
+                    width: 240px;
+                    left: 10px;
+                    top: 260px;
+                }
+                .ziying,.manjian{
+                    text-align: center;
+                    width: 35px;
+                    font-size: 12px;
+                    height: 16px;
+                    line-height: 16px;
+                    color: #fff;
+                    position: absolute;
+                    top: -25px;
+                }
+                .ziying{
+                    background: #000;
+                    left: 5px;
+                }
+                .manjian{
+                    background: #E93B39;
+                    left: 55px;
+                }
+            }
+            .product_img{
+                position: absolute;
+                left:10px;
+                top: 0px;
+                img{
+                    width: 240px;
+                    height: 240px;
+                }
+            }
+        }
+        .goods:hover{
+            height: 360px;
+            width: 240px;
+            position:absolute;
+            border: 2px solid #CCCCCC;
+            top: -2px;
+            left: -2px;
+            z-index: 2;
+            padding: 24px 14px 15px;
+        }
+    }
+}
+#s_footer {
+    margin-top: 0;
+}
+
+//.list_shoushi{
+//   display: none;
+//              width: 1200px;
+//              height: 400px;
+//              background: #fff;
+//              position: absolute;
+//              left: 0px;
+//}

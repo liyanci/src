@@ -28,22 +28,27 @@
 #r_head .container .r_head_r a:hover {
     color: #F5A222;
 }
+
 #l_content {
-  height: 780px;
-  box-sizing: border-box;
-  background: #fdf8f4 url(../img/login_03.jpg) no-repeat 80px -70px; }
-#s_footer{
+    height: 780px;
+    box-sizing: border-box;
+    background: #fdf8f4 url(../img/login_03.jpg) no-repeat 80px -70px;
+}
+
+#s_footer {
     margin-top: 0;
 }
-.login{
+
+.login {
     width: 310px;
     padding: 30px 35px;
     margin-top: 120px;
     position: relative;
     background: #fff;
-    .login_top{
-        ul{
-            li{
+    box-shadow: 0px 0px 10px 2px #ccc;
+    .login_top {
+        ul {
+            li {
                 width: 50%;
                 height: 20px;
                 line-height: 20px;
@@ -52,66 +57,76 @@
                 text-align: center;
                 margin-bottom: 50px;
             }
-            .on{
+            .on {
                 color: #F5A222;
             }
         }
-        .erwei_login{
-            display: none;
-            p{
+        .erwei_login {
+            p {
                 font-size: 14px;
                 font-weight: bold;
                 color: #000;
                 text-align: center;
                 margin-top: 30px;
-                a{
+                a {
                     color: #F19108;
                     text-decoration: underline;
                     cursor: pointer;
                 }
             }
-            img{
+            img {
                 width: 192px;
                 display: block;
                 margin: 0 auto;
             }
         }
-       .psw_login{
-           input{
-               width: 298px;
-               height: 20px;
-               line-height: 20px;
-               padding: 14px 5px;
-               border: 1px solid #dedede;
-               font-size: 14px;
-//             font-weight: bold;
-               margin-bottom: 20px;
-               #queren{
-                   width: 10px;
-               }
-               
-           }
-          
-       }
+        .psw_login {
+            display: none;
+            input {
+                width: 298px;
+                height: 20px;
+                line-height: 20px;
+                padding: 14px 5px;
+                border: 1px solid #dedede;
+                font-size: 14px;
+                margin-bottom: 20px;
+            }
+            #log {
+                width: 310px;
+                height: 50px;
+                background: #f19108;
+                color: #fff;
+                cursor: pointer;
+                font-size: 16px;
+                margin-bottom: 10px;
+                margin-top: 10px;
+            }
+            #queren {
+                width: 13px;
+                margin: 0;
+                margin-right: 5px;
+            }
+            span {
+                font-size: 12px;
+                height: 20px;
+                line-height: 20px;
+            }
+        }
     }
-    .login_bottom{
-        p{
+    .login_bottom {
+        p {
             font-size: 12px;
             color: #999;
             margin-bottom: 10px;
             margin-top: 20px;
-           
-            
         }
-        a{
+        a {
             font-size: 12px;
             color: #999;
             margin-left: 5px;
-            img{
+            img {
                 width: 16px;
             }
         }
-        
     }
 }
-

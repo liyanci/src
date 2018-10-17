@@ -1,15 +1,922 @@
 <!DOCTYPE html>
 <html>
+
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/common.css" />
+		<link rel="stylesheet" type="text/css" href="../css/goodsList.css" />
+		<link rel="stylesheet" type="text/css" href="../css/base.css" />
+		<script src="../lib/jquery-1.10.1.min.js" type="text/javascript" charset="utf-8"></script>
+
 		<script src="../js/cookie.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/ajax.js" type="text/javascript" charset="utf-8"></script>
 	</head>
+
 	<body>
+		<div id="s_header">
+			<div class="container">
+				<div class="topBar">
+					<div class="topBar_l">
+						<img src="../img/erweima.png" />
+						<p class="topBar_l_one">扫码下载寺库APP</p>
+						<p class="topBar_l_two">给你全世界的美好</p>
+					</div>
+					<div class="topBar_c">
+						<a href="index.html"><img src="../img/siku.jpg" /></a>
+					</div>
+					<div class="topBar_r">
+						<div></div>
+						<div class="topBar_r_w">
+							<a href="html/login.html">请登录</a>
+							<a href="html/reg.html">免费注册</a>
+							<a href="#" class="server" id="server">客户服务&nbsp;<i class="harrow"></i></a>
+							<a href="#" class="media">媒体聚焦</a>
+							<div class="topBar_list">
+								<ul>
+									<li>
+										<a href="#">在线客服</a>
+									</li>
+									<li>
+										<a href="#">养护中心</a>
+									</li>
+									<li>
+										<a href="#">帮助中心</a>
+									</li>
+									<li>贵宾专线：400-40-56789</li>
+								</ul>
+							</div>
+							<p><b></b>
+								<a href="html/car.html" class="cart">购物车</a><span id="carNum">(0)</span></p>
+						</div>
+					</div>
+				</div>
+
+			</div>
+			<div class="navBar">
+				<div class="unfolder">
+					<ul class="bagpack">
+						<li>
+							<h4>分类</h4>
+							<a href="#">男士包袋</a>
+							<a href="#">女士包袋</a>
+							<a href="#">钱包</a>
+							<a href="#">斜挎包</a>
+							<a href="#">双肩包</a>
+							<a href="#">女士包袋</a>
+							<a href="#">手拿包</a>
+							<a href="#">拉杆箱</a>
+							<a href="#">手提包</a>
+
+						</li>
+						<li>
+							<h4>品牌</h4>
+							<a href="#">圣罗兰</a>
+							<a href="#">蔻驰</a>
+							<a href="#">葆蝶家</a>
+							<a href="#">杜家班纳</a>
+							<a href="#">缪缪</a>
+							<a href="#">瑞贝卡.明可弗</a>
+							<a href="#">宝格丽</a>
+							<a href="#">巴利</a>
+							<a href="#">范思哲</a>
+							<a href="#">克洛伊</a>
+							<a href="#">亚历山大.麦昆</a>
+							<a href="#">安蒂佩玛</a>
+						</li>
+						<li>
+							<h4>热词</h4>
+							<a href="#">杀手包</a>
+							<a href="#">饺子包</a>
+							<a href="#">柳丁包</a>
+							<a href="#">小怪兽</a>
+							<a href="#">GUCCI酒神</a>
+							<a href="#">BurBerry格纹</a>
+							<a href="#">贝壳包</a>
+							<a href="#">链条包</a>
+							<a href="#">托特包</a>
+							<a href="#">购物袋</a>
+							<a href="#">LV老花</a>
+							<a href="#">mcm双肩包</a>
+						</li>
+					</ul>
+					<ul class="clock">
+						<li>
+							<h4>分类</h4>
+							<a href="#">男士腕表</a>
+							<a href="#">女士腕表</a>
+							<a href="#">机械腕表</a>
+							<a href="#">石英腕表</a>
+						</li>
+						<li>
+							<h4>品牌</h4>
+							<a href="#">宝达菲丽</a>
+							<a href="#">宝珀</a>
+							<a href="#">朗格</a>
+							<a href="#">芝柏</a>
+							<a href="#">万国</a>
+							<a href="#">格拉苏蒂</a>
+							<a href="#">真力时</a>
+							<a href="#">欧米茄</a>
+							<a href="#">天梭</a>
+							<a href="#">汉密尔顿</a>
+							<a href="#">江诗丹顿</a>
+							<a href="#">Bedat&Co</a>
+							<a href="#">宝玑</a>
+							<a href="#">积家</a>
+							<a href="#">肖邦</a>
+							<a href="#">沛纳海</a>
+							<a href="#">劳力士</a>
+							<a href="#">卡地亚</a>
+							<a href="#">浪琴</a>
+							<a href="#">美度</a>
+						</li>
+						<li>
+							<h4>热词</h4>
+							<a href="#">蓝气球</a>
+							<a href="#">星座</a>
+							<a href="#">大师</a>
+							<a href="#">五十寻</a>
+							<a href="#">浦计</a>
+							<a href="#">水鬼</a>
+							<a href="#">蝶飞</a>
+							<a href="#">名匠</a>
+							<a href="#">北仑赛丽</a>
+							<a href="#">日志</a>
+						</li>
+					</ul>
+					<ul class="jewel">
+						<li>
+							<h4>分类</h4>
+							<a href="html/goodsList.html" id="gl">项链</a>
+							<a href="#">手链</a>
+							<a href="#">手镯</a>
+							<a href="#">手串</a>
+							<a href="#">首饰套装</a>
+							<a href="#">头饰</a>
+							<a href="#">吊坠</a>
+							<a href="#">耳坠</a>
+							<a href="#">戒指</a>
+							<a href="#">串珠</a>
+							<a href="#">胸针</a>
+							<a href="#">宝石</a>
+						</li>
+						<li>
+							<h4>品牌</h4>
+							<a href="#">蒂芙尼</a>
+							<a href="#">宝格丽</a>
+							<a href="#">爱马仕</a>
+							<a href="#">香奈儿</a>
+							<a href="#">APM Monaco</a>
+							<a href="#">戴木妮</a>
+							<a href="#">迪奥</a>
+							<a href="#">施华洛世奇</a>
+							<a href="#">潘多拉</a>
+							<a href="#">路易登威</a>
+							<a href="#">莫妮卡维纳徳</a>
+							<a href="#">古钻</a>
+
+						</li>
+						<li>
+							<h4>热词</h4>
+							<a href="#">宝格丽弹簧系列</a>
+							<a href="#">蒂芙尼经典桃心</a>
+							<a href="#">迪奥小圆珠</a>
+							<a href="#">香奈儿双C耳钉</a>
+							<a href="#">彩宝戒指</a>
+							<a href="#">水鬼</a>
+							<a href="#">足金首饰</a>
+							<a href="#">明星同款</a>
+							<a href="#">潘多拉串珠</a>
+							<a href="#">婚戒</a>
+							<a href="#">钻戒</a>
+							<a href="#">珍珠吊坠</a>
+							<a href="#">爱马仕手镯</a>
+						</li>
+					</ul>
+					<ul class="cloth">
+						<li>
+							<h4>分类</h4>
+							<a href="#">男士包袋</a>
+							<a href="#">女士包袋</a>
+							<a href="#">钱包</a>
+							<a href="#">斜挎包</a>
+							<a href="#">双肩包</a>
+							<a href="#">女士包袋</a>
+							<a href="#">手拿包</a>
+							<a href="#">拉杆箱</a>
+							<a href="#">手提包</a>
+
+						</li>
+						<li>
+							<h4>品牌</h4>
+							<a href="#">圣罗兰</a>
+							<a href="#">蔻驰</a>
+							<a href="#">葆蝶家</a>
+							<a href="#">杜家班纳</a>
+							<a href="#">缪缪</a>
+							<a href="#">瑞贝卡.明可弗</a>
+							<a href="#">宝格丽</a>
+							<a href="#">巴利</a>
+							<a href="#">范思哲</a>
+							<a href="#">克洛伊</a>
+							<a href="#">亚历山大.麦昆</a>
+							<a href="#">安蒂佩玛</a>
+						</li>
+						<li>
+							<h4>热词</h4>
+							<a href="#">杀手包</a>
+							<a href="#">饺子包</a>
+							<a href="#">柳丁包</a>
+							<a href="#">小怪兽</a>
+							<a href="#">GUCCI酒神</a>
+							<a href="#">BurBerry格纹</a>
+							<a href="#">贝壳包</a>
+							<a href="#">链条包</a>
+							<a href="#">托特包</a>
+							<a href="#">购物袋</a>
+							<a href="#">LV老花</a>
+							<a href="#">mcm双肩包</a>
+						</li>
+					</ul>
+
+					<ul class="ornament">
+						<li>
+							<h4>分类</h4>
+							<a href="#">男士包袋</a>
+							<a href="#">女士包袋</a>
+							<a href="#">钱包</a>
+							<a href="#">斜挎包</a>
+							<a href="#">双肩包</a>
+							<a href="#">女士包袋</a>
+							<a href="#">手拿包</a>
+							<a href="#">拉杆箱</a>
+							<a href="#">手提包</a>
+
+						</li>
+						<li>
+							<h4>品牌</h4>
+							<a href="#">圣罗兰</a>
+							<a href="#">蔻驰</a>
+							<a href="#">葆蝶家</a>
+							<a href="#">杜家班纳</a>
+							<a href="#">缪缪</a>
+							<a href="#">瑞贝卡.明可弗</a>
+							<a href="#">宝格丽</a>
+							<a href="#">巴利</a>
+							<a href="#">范思哲</a>
+							<a href="#">克洛伊</a>
+							<a href="#">亚历山大.麦昆</a>
+							<a href="#">安蒂佩玛</a>
+						</li>
+						<li>
+							<h4>热词</h4>
+							<a href="#">杀手包</a>
+							<a href="#">饺子包</a>
+							<a href="#">柳丁包</a>
+							<a href="#">小怪兽</a>
+							<a href="#">GUCCI酒神</a>
+							<a href="#">BurBerry格纹</a>
+							<a href="#">贝壳包</a>
+							<a href="#">链条包</a>
+							<a href="#">托特包</a>
+							<a href="#">购物袋</a>
+							<a href="#">LV老花</a>
+							<a href="#">mcm双肩包</a>
+						</li>
+					</ul>
+					<ul class="sport">
+						<li>
+							<h4>分类</h4>
+							<a href="#">男士包袋</a>
+							<a href="#">女士包袋</a>
+							<a href="#">钱包</a>
+							<a href="#">斜挎包</a>
+							<a href="#">双肩包</a>
+							<a href="#">女士包袋</a>
+							<a href="#">手拿包</a>
+							<a href="#">拉杆箱</a>
+							<a href="#">手提包</a>
+
+						</li>
+						<li>
+							<h4>品牌</h4>
+							<a href="#">圣罗兰</a>
+							<a href="#">蔻驰</a>
+							<a href="#">葆蝶家</a>
+							<a href="#">杜家班纳</a>
+							<a href="#">缪缪</a>
+							<a href="#">瑞贝卡.明可弗</a>
+							<a href="#">宝格丽</a>
+							<a href="#">巴利</a>
+							<a href="#">范思哲</a>
+							<a href="#">克洛伊</a>
+							<a href="#">亚历山大.麦昆</a>
+							<a href="#">安蒂佩玛</a>
+						</li>
+						<li>
+							<h4>热词</h4>
+							<a href="#">杀手包</a>
+							<a href="#">饺子包</a>
+							<a href="#">柳丁包</a>
+							<a href="#">小怪兽</a>
+							<a href="#">GUCCI酒神</a>
+							<a href="#">BurBerry格纹</a>
+							<a href="#">贝壳包</a>
+							<a href="#">链条包</a>
+							<a href="#">托特包</a>
+							<a href="#">购物袋</a>
+							<a href="#">LV老花</a>
+							<a href="#">mcm双肩包</a>
+						</li>
+					</ul>
+					<ul class="life">
+						<li>
+							<h4>分类</h4>
+							<a href="#">家具生活</a>
+							<a href="#">家具生活</a>
+							<a href="#">家具生活</a>
+							<a href="#">家具生活</a>
+							<a href="#">家具生活</a>
+							<a href="#">家具生活</a>
+							<a href="#">家具生活</a>
+							<a href="#">家具生活</a>
+							<a href="#">家具生活</a>
+							<a href="#">家具生活</a>
+							<a href="#">家具生活</a>
+							<a href="#">家具生活</a>
+
+						</li>
+						<li>
+							<h4>品牌</h4>
+							<a href="#">圣罗兰</a>
+							<a href="#">蔻驰</a>
+							<a href="#">葆蝶家</a>
+							<a href="#">杜家班纳</a>
+							<a href="#">缪缪</a>
+							<a href="#">瑞贝卡.明可弗</a>
+							<a href="#">宝格丽</a>
+							<a href="#">巴利</a>
+							<a href="#">范思哲</a>
+							<a href="#">克洛伊</a>
+							<a href="#">亚历山大.麦昆</a>
+							<a href="#">安蒂佩玛</a>
+						</li>
+						<li>
+							<h4>热词</h4>
+							<a href="#">杀手包</a>
+							<a href="#">饺子包</a>
+							<a href="#">柳丁包</a>
+							<a href="#">小怪兽</a>
+							<a href="#">GUCCI酒神</a>
+							<a href="#">BurBerry格纹</a>
+							<a href="#">贝壳包</a>
+							<a href="#">链条包</a>
+							<a href="#">托特包</a>
+							<a href="#">购物袋</a>
+							<a href="#">LV老花</a>
+							<a href="#">mcm双肩包</a>
+						</li>
+					</ul>
+					<ul class="life_style">
+						<li>
+							<h4>分类</h4>
+							<a href="#">男士包袋</a>
+							<a href="#">女士包袋</a>
+							<a href="#">钱包</a>
+							<a href="#">斜挎包</a>
+							<a href="#">双肩包</a>
+							<a href="#">女士包袋</a>
+							<a href="#">手拿包</a>
+							<a href="#">拉杆箱</a>
+							<a href="#">手提包</a>
+
+						</li>
+						<li>
+							<h4>品牌</h4>
+							<a href="#">圣罗兰</a>
+							<a href="#">蔻驰</a>
+							<a href="#">葆蝶家</a>
+							<a href="#">杜家班纳</a>
+							<a href="#">缪缪</a>
+							<a href="#">瑞贝卡.明可弗</a>
+							<a href="#">宝格丽</a>
+							<a href="#">巴利</a>
+							<a href="#">范思哲</a>
+							<a href="#">克洛伊</a>
+							<a href="#">亚历山大.麦昆</a>
+							<a href="#">安蒂佩玛</a>
+						</li>
+						<li>
+							<h4>热词</h4>
+							<a href="#">杀手包</a>
+							<a href="#">饺子包</a>
+							<a href="#">柳丁包</a>
+							<a href="#">小怪兽</a>
+							<a href="#">GUCCI酒神</a>
+							<a href="#">BurBerry格纹</a>
+							<a href="#">贝壳包</a>
+							<a href="#">链条包</a>
+							<a href="#">托特包</a>
+							<a href="#">购物袋</a>
+							<a href="#">LV老花</a>
+							<a href="#">mcm双肩包</a>
+						</li>
+					</ul>
+					<ul class="baby">
+						<li>
+							<h4>分类</h4>
+							<a href="#">宝宝用品</a>
+							<a href="#">宝宝用品</a>
+							<a href="#">宝宝用品</a>
+							<a href="#">宝宝用品</a>
+							<a href="#">宝宝用品</a>
+							<a href="#">宝宝用品</a>
+							<a href="#">宝宝用品</a>
+							<a href="#">宝宝用品</a>
+							<a href="#">宝宝用品</a>
+							<a href="#">宝宝用品</a>
+							<a href="#">宝宝用品</a>
+							<a href="#">宝宝用品</a>
+							<a href="#">宝宝用品</a>
+							<a href="#">宝宝用品</a>
+							<a href="#">宝宝用品</a>
+
+						</li>
+						<li>
+							<h4>品牌</h4>
+							<a href="#">圣罗兰</a>
+							<a href="#">蔻驰</a>
+							<a href="#">葆蝶家</a>
+							<a href="#">杜家班纳</a>
+							<a href="#">缪缪</a>
+							<a href="#">瑞贝卡.明可弗</a>
+							<a href="#">宝格丽</a>
+							<a href="#">巴利</a>
+							<a href="#">范思哲</a>
+							<a href="#">克洛伊</a>
+							<a href="#">亚历山大.麦昆</a>
+							<a href="#">安蒂佩玛</a>
+						</li>
+						<li>
+							<h4>热词</h4>
+							<a href="#">杀手包</a>
+							<a href="#">饺子包</a>
+							<a href="#">柳丁包</a>
+							<a href="#">小怪兽</a>
+							<a href="#">GUCCI酒神</a>
+							<a href="#">BurBerry格纹</a>
+							<a href="#">贝壳包</a>
+							<a href="#">链条包</a>
+							<a href="#">托特包</a>
+							<a href="#">购物袋</a>
+							<a href="#">LV老花</a>
+							<a href="#">mcm双肩包</a>
+						</li>
+					</ul>
+					<ul class="car">
+						<li>
+							<h4>分类</h4>
+							<a href="#">男士包袋</a>
+							<a href="#">女士包袋</a>
+							<a href="#">钱包</a>
+							<a href="#">斜挎包</a>
+							<a href="#">双肩包</a>
+							<a href="#">女士包袋</a>
+							<a href="#">手拿包</a>
+							<a href="#">拉杆箱</a>
+							<a href="#">手提包</a>
+
+						</li>
+						<li>
+							<h4>品牌</h4>
+							<a href="#">圣罗兰</a>
+							<a href="#">蔻驰</a>
+							<a href="#">葆蝶家</a>
+							<a href="#">杜家班纳</a>
+							<a href="#">缪缪</a>
+							<a href="#">瑞贝卡.明可弗</a>
+							<a href="#">宝格丽</a>
+							<a href="#">巴利</a>
+							<a href="#">范思哲</a>
+							<a href="#">克洛伊</a>
+							<a href="#">亚历山大.麦昆</a>
+							<a href="#">安蒂佩玛</a>
+						</li>
+						<li>
+							<h4>热词</h4>
+							<a href="#">杀手包</a>
+							<a href="#">饺子包</a>
+							<a href="#">柳丁包</a>
+							<a href="#">小怪兽</a>
+							<a href="#">GUCCI酒神</a>
+							<a href="#">BurBerry格纹</a>
+							<a href="#">贝壳包</a>
+							<a href="#">链条包</a>
+							<a href="#">托特包</a>
+							<a href="#">购物袋</a>
+							<a href="#">LV老花</a>
+							<a href="#">mcm双肩包</a>
+						</li>
+					</ul>
+				</div>
+				<div class="container">
+					<ul>
+						<li>
+							<a href="../index.html" class="index">首页</a>
+						</li>
+						<li>
+							<a href="#" class="c_bagpack">包袋</a>
+						</li>
+						<li>
+							<a href="#" class="c_clock">腕表</a>
+						</li>
+						<li>
+							<a href="#" class="c_jewel">珠宝首饰</a>
+						</li>
+						<li>
+							<a href="#" class="c_cloth">服装鞋靴</a>
+						</li>
+						<li>
+							<a href="#" class="c_ornament">配饰</a>
+						</li>
+						<li>
+							<a href="#" class="c_sport">体育运动</a>
+						</li>
+						<li>
+							<a href="#" class="c_life">家具生活</a>
+						</li>
+						<li>
+							<a href="#" class="c_life_style">生活方式</a>
+						</li>
+						<li>
+							<a href="#" class="c_baby">母婴美妆</a>
+						</li>
+						<li>
+							<a href="#" class="c_car">豪车频道</a>
+						</li>
+						<li><input type="text" name="" id="select" value="" placeholder="Roger Vivier" /></li>
+					</ul>
+				</div>
+			</div>
+
+		</div>
+		<div id="g_list" class="clearfix">
+			<div class="container">
+				<div class="g_list_one">
+					<a href="#" class="ss">全部
+					</a><em>></em>
+					<a href="#" class="g_l_shoushi ss">首饰</a><em>></em>
+					<a href="#" class="g_l_xiangshi ss">项饰</a><em>></em>
+					<a href="#" class="g_l_xianglian ss">项链</div>
+				</a>
+			</div>
+			<div class="g_list_one_bottom">
+				<div class="list_shoushi">
+
+					<a href="">包袋</a>
+					<a href="">增值服务</a>
+					<a href="">艺术品1</a>
+					<a href="">手工艺品</a>
+					<a href="">衍生品</a>
+					<a href="">腕表</a>
+					<a href="">首饰</a>
+					<a href="">男装</a>
+					<a href="">女鞋</a>
+					<a href="">男鞋</a>
+					<a href="">女装</a>
+					<a href="">配饰</a>
+					<a href="">个人护理</a>
+					<a href="">美容护肤</a>
+					<a href="">彩妆香氛</a>
+					<a href="">家纺家饰</a>
+					<a href="">生活用品</a>
+					<a href="">家具家装</a>
+					<a href="">餐具厨具</a>
+					<a href="">商务礼品</a>
+					<a href="">鲜花绿植</a>
+					<a href="">户外</a>
+					<a href="">运动</a>
+					<a href="">内衣</a>
+					<a href="">家电数码</a>
+					<a href="">袜子</a>
+					<a href="">营养保健</a>
+					<a href="">酒</a>
+					<a href="">宠物用品</a>
+					<a href="">母婴</a>
+					<a href="">图书</a>
+					<a href="">生活方式</a>
+					<a href="">体育服务</a>
+					<a href="">飞机/游艇</a>
+					<a href="">金银投资</a>
+					<a href="">艺术品</a>
+					<a href="">精品汽车</a>
+					<a href="">汽车用品</a>
+					<a href="">工艺品</a>
+					<a href="">食品生鲜</a>
+				</div>
+				<div class="list_xiangshi">
+					<a href="">项饰</a>
+					<a href="">首饰定制</a>
+					<a href="">腕饰</a>
+					<a href="">戒指/指环</a>
+					<a href="">耳饰</a>
+					<a href="">胸针</a>
+					<a href="">首饰套装</a>
+					<a href="">宝石裸石</a>
+					<a href="">手把件</a>
+					<a href="">头饰</a>
+					<a href="">串珠配珠</a>
+				</div>
+				<div class="list_xianglian">
+					<a href="">项链</a>
+					<a href="">吊坠</a>
+				</div>
+				<div class="g_list_two clearfix">
+					<div class="container">
+						<div class="g_list_two_t">
+							<div class="g_list_two_t_l fl ">品牌：</div>
+							<div class="g_list_two_t_r fl">
+								<a href="">Swarovski/施华洛世奇</a>
+								<a href="">Tiffany & Co./蒂芙尼 </a>
+								<a href="">BVLGARI/宝格丽</a>
+								<a href="">APM Monaco/APM Monaco</a>
+								<a href="">Van Cleef & Arpels/梵克雅宝</a>
+								<a href="">Louis Vuitton/路易威登</a>
+								<a href="">DIOR/迪奥</a>
+								<a href="">Chaumet/尚美</a>
+								<a href="">zhuella/珠艾乐</a>
+								<a href="">SUEMOMO/苏茉茉</a>
+							</div>
+						</div>
+						<div class="g_list_two_b">
+							<div class="g_list_two_t_l fl">材质属性：</div>
+							<div class="g_list_two_t_r fl">
+								<a href="">18K金</a>
+								<a href="">银饰</a>
+								<a href="">钻石</a>
+								<a href="">彩宝 </a>
+								<a href="">翡翠</a>
+								<a href="">玉石</a>
+								<a href="">珍珠</a>
+								<a href="">琥珀蜜蜡</a>
+								<a href="">水晶玛瑙</a>
+								<a href=""> 施华洛世奇水晶</a>
+							</div>
+						</div>
+					</div>
+					</div>
+					<div class="g_list_three clearfix">
+						<div class="container">
+							<div class="product_title clearfix">
+								<div class="shangcheng fl hong">商场</div>
+								<div class="paimai fl">拍卖</div>
+							</div>
+							<div class="product_px">
+								<div class="product_px_one">
+									<a href="#" class="on">综合<i style="background: url(../img/search_icon3.png) no-repeat 3px -183px"></i></a>
+									<a href="#">人气<i style="background: url(../img/search_icon3.png) no-repeat 3px -183px"></i></a>
+									<a href="#">新品<i style="background: url(../img/search_icon3.png) no-repeat 3px -183px"></i></a>
+									<a href="#">销量<i style="background: url(../img/search_icon3.png) no-repeat 3px -183px"></i></a>
+									<a href="#">折扣<i style="background: url(../img/search_icon3.png) no-repeat 3px -183px"></i></a>
+									<a href="#">价格<i style="background: url(../img/search_icon3.png) no-repeat 3px -183px"></i></a>
+								</div>
+								<div class="product_px_two"></div>
+								<div class="product_px_three"></div>
+								<div class="product_px_four"></div>
+								<div class="product_px_five"></div>
+							</div>
+							<div class="product_list clearfix" >
+								<!--<dl class="clearfix">
+									<div class="goods clearfix">
+										<div class="product_img"><img src="../img/goodList01.jpg"/></div>
+										<div class="tips">
+											<span class="ziying">自营</span><span class="manjian">满减</span>
+										</div>
+										<div class="name">
+											<p>STYLUS 【儿童个人信息刻字订制】  Miffy V Miffy Moving(Y) Silver系列米菲幼儿银项链</p>
+										</div>
+										<div class="price">
+											<span>￥845</span>
+										</div>
+										<div id="addCar_shoucang">
+											<div id="addCar">
+												加入购物车
+											</div>
+											<div id="shoucang">
+												<i></i><span class="shou">收藏</span>
+											</div>
+										</div>
+									</div>
+								</dl>-->
+								<!--<dl class="clearfix">
+									<div class="goods clearfix">
+										<div class="product_img"><img src="../img/goodList01.jpg"/></div>
+										<div class="tips">
+											<span class="ziying">自营</span><span class="manjian">满减</span>
+										</div>
+										<div class="name">
+											<p>STYLUS 【儿童个人信息刻字订制】  Miffy V Miffy Moving(Y) Silver系列米菲幼儿银项链</p>
+										</div>
+										<div class="price">
+											<span>￥845</span>
+										</div>
+										<div id="addCar_shoucang">
+											<div id="addCar">
+												加入购物车
+											</div>
+											<div id="shoucang">
+												<i></i><span class="shou">收藏</span>
+											</div>
+										</div>
+									</div>
+								</dl>
+								<dl class="clearfix">
+									<div class="goods clearfix">
+										<div class="product_img"><img src="../img/goodList01.jpg"/></div>
+										<div class="tips">
+											<span class="ziying">自营</span><span class="manjian">满减</span>
+										</div>
+										<div class="name">
+											<p>STYLUS 【儿童个人信息刻字订制】  Miffy V Miffy Moving(Y) Silver系列米菲幼儿银项链</p>
+										</div>
+										<div class="price">
+											<span>￥845</span>
+										</div>
+										<div id="addCar_shoucang">
+											<div id="addCar">
+												加入购物车
+											</div>
+											<div id="shoucang">
+												<i></i><span class="shou">收藏</span>
+											</div>
+										</div>
+									</div>
+								</dl>
+								<dl class="clearfix">
+									<div class="goods clearfix">
+										<div class="product_img"><img src="../img/goodList01.jpg"/></div>
+										<div class="tips">
+											<span class="ziying">自营</span><span class="manjian">满减</span>
+										</div>
+										<div class="name">
+											<p>STYLUS 【儿童个人信息刻字订制】  Miffy V Miffy Moving(Y) Silver系列米菲幼儿银项链</p>
+										</div>
+										<div class="price">
+											<span>￥845</span>
+										</div>
+										<div id="addCar_shoucang">
+											<div id="addCar">
+												加入购物车
+											</div>
+											<div id="shoucang">
+												<i></i><span class="shou">收藏</span>
+											</div>
+										</div>
+									</div>
+								</dl>
+								<dl class="clearfix">
+									<div class="goods clearfix">
+										<div class="product_img"><img src="../img/goodList01.jpg"/></div>
+										<div class="tips">
+											<span class="ziying">自营</span><span class="manjian">满减</span>
+										</div>
+										<div class="name">
+											<p>STYLUS 【儿童个人信息刻字订制】  Miffy V Miffy Moving(Y) Silver系列米菲幼儿银项链</p>
+										</div>
+										<div class="price">
+											<span>￥845</span>
+										</div>
+										<div id="addCar_shoucang">
+											<div id="addCar">
+												加入购物车
+											</div>
+											<div id="shoucang">
+												<i></i><span class="shou">收藏</span>
+											</div>
+										</div>
+									</div>
+								</dl>-->
+								<!--<dl></dl>
+								<dl></dl>
+								<dl></dl>
+								<dl></dl>-->
+							</div>
+						</div>
+					</div>
+					<div class="g_list_four"></div>
+
+				</div>
+			</div>
+			<div id="s_footer">
+				<div class="container">
+					<ul>
+						<li>
+							<a href="">新手指南</a>
+							<a href="">付款方式</a>
+							<a href="">物流配送</a>
+							<a href="">售后服务</a>
+						</li>
+						<li>
+							<a href="">寺库微博</a>
+							<a href="">友情链接</a>
+							<a href="">奢侈品热词</a>
+							<a href="">寺库国际站</a>
+						</li>
+						<li>
+							<a href="">加入寺库</a>
+							<a href="">联系我们</a>
+							<a href="">关于寺库</a>
+							<a href="">帮助中心</a>
+						</li>
+						<li>
+							<a href="">寺库奢侈品养护</a>
+							<a href="">寺库招商</a>
+							<a href="">Investors</a>
+
+						</li>
+					</ul>
+					<div class="s_foot_info">
+						<p class="clearfix">
+							<span>
+							<a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010102001392">
+								<img src="../img/pcfooterbatb.png"/>京公安备11010102001392
+							</a>
+						</span>
+							<span>京ICP证110119号 京ICP备09084709号-3</span>
+							<span><a href="http://www.secoo.com/listTop/180712_zlgl.shtml">ISO9001中国质量管理体系认证</a></span>
+							<span><a href="http://www.secoo.com/listTop/180712_publication.shtml">出版物经营许可证</a></span>
+							<span><a href="http://www.secoo.com/listTop/180712_foodBlicense.shtml">食品经营许可证</a></span>
+						</p>
+						<p class="clearfix">
+							<span>京B2-20181305</span>
+							<span>京食药网食备201810026</span>
+							<span>客服电话：400-875-6789</span>
+							<span>COPYRIGHT © 2010-2018 北京寺库商贸有限公司 版权所有</span>
+						</p>
+						<p class="foot_img clearfix">
+							<a href="http://www.secoo.com/listTop/180712_businessLicense.shtml"><img src="../img/f_01.jpg" /></a>
+							<a href="//ss.knet.cn/verifyseal.dll?sn=e16051911010263532a4zi000000&amp;a=1&amp;pa=0.6321878711618679"><img src="../img/cnnic.png" /></a>
+							<a href="http://search.szfw.org/cert/l/CX20141231006253006352"><img src="../img/kexin.jpg" /></a>
+							<a href="http://www.bj.cyberpolice.cn/index.do#"><img src="../img/f_03.jpg" /></a>
+						</p>
+					</div>
+				</div>
+			</div>
 	</body>
+
 </html>
+<script src="../js/index.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript">
-	window.onload=function(){
-		console.log(getCookie('id'));
-	}
+	$('.g_l_shoushi').hover(function() {
+		$('.list_shoushi').show();
+		$('.list_shoushi').hover(function() {
+			$(this).show();
+			$('.g_l_shoushi').attr('style', 'background: white;');
+		}, function() {
+			$(this).hide();
+			$('.g_l_shoushi').removeAttr('style');
+		})
+	}, function() {
+		$('.list_shoushi').hide();
+	})
+	$('.g_l_xiangshi').hover(function() {
+		$('.list_xiangshi').show();
+		$('.list_xiangshi').hover(function() {
+			$(this).show();
+			$('.g_l_xiangshi').attr('style', 'background: white;');
+		}, function() {
+			$(this).hide();
+			$('.g_l_xiangshi').removeAttr('style');
+		})
+	}, function() {
+		$('.list_xiangshi').hide();
+	})
+	$('.g_l_xianglian').hover(function() {
+		$('.list_xianglian').show();
+		$('.list_xianglian').hover(function() {
+			$(this).show();
+			$('.g_l_xianglian').attr('style', 'background: white;');
+		}, function() {
+			$(this).hide();
+			$('.g_l_xianglian').removeAttr('style');
+		})
+	}, function() {
+		$('.list_shoushi').hide();
+	})
+//	var 
+	var uid=getCookie('id');
+	var url='../api/select.php';
+	var data='uid='+uid;
+	ajax('POST',url,data,function(str){
+//		console.log(str);
+		var data=JSON.parse(str);
+//		console.log(data.uid);
+		var html='';
+		for(var i=0;i<data.length;i++){
+			html+='<dl class="clearfix"><div class="goods clearfix"><div class="product_img"><img src="'+data[i].gimg+'"/></div><div class="tips"><span class="ziying">自营</span><span class="manjian">满减</span></div><div class="name"><p>'+data[i].gname+'</p></div><div class="price"><span>￥'+data[i].price+'</span></div><div id="addCar_shoucang"><div id="addCar">加入购物车</div><div id="shoucang"><i></i><span class="shou">收藏</span></div></div></div></dl>'
+		}
+		console.log(html);
+		$('.product_list').html(html);
+	})
 </script>

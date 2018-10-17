@@ -36,7 +36,8 @@
   padding: 30px 35px;
   margin-top: 120px;
   position: relative;
-  background: #fff; }
+  background: #fff;
+  box-shadow: 0px 0px 10px 2px #ccc; }
   .login .login_top ul li {
     width: 50%;
     height: 20px;
@@ -47,32 +48,47 @@
     margin-bottom: 50px; }
   .login .login_top ul .on {
     color: #F5A222; }
-  .login .login_top .erwei_login {
-    display: none; }
-    .login .login_top .erwei_login p {
-      font-size: 14px;
-      font-weight: bold;
-      color: #000;
-      text-align: center;
-      margin-top: 30px; }
-      .login .login_top .erwei_login p a {
-        color: #F19108;
-        text-decoration: underline;
-        cursor: pointer; }
-    .login .login_top .erwei_login img {
-      width: 192px;
-      display: block;
-      margin: 0 auto; }
-  .login .login_top .psw_login input {
-    width: 298px;
-    height: 20px;
-    line-height: 20px;
-    padding: 14px 5px;
-    border: 1px solid #dedede;
+  .login .login_top .erwei_login p {
     font-size: 14px;
-    margin-bottom: 20px; }
-    .login .login_top .psw_login input #queren {
-      width: 10px; }
+    font-weight: bold;
+    color: #000;
+    text-align: center;
+    margin-top: 30px; }
+    .login .login_top .erwei_login p a {
+      color: #F19108;
+      text-decoration: underline;
+      cursor: pointer; }
+  .login .login_top .erwei_login img {
+    width: 192px;
+    display: block;
+    margin: 0 auto; }
+  .login .login_top .psw_login {
+    display: none; }
+    .login .login_top .psw_login input {
+      width: 298px;
+      height: 20px;
+      line-height: 20px;
+      padding: 14px 5px;
+      border: 1px solid #dedede;
+      font-size: 14px;
+      margin-bottom: 20px; }
+    .login .login_top .psw_login #log {
+      width: 310px;
+      height: 50px;
+      background: #f19108;
+      color: #fff;
+      cursor: pointer;
+      font-size: 16px;
+      margin-bottom: 10px;
+      margin-top: 10px; }
+    .login .login_top .psw_login #queren {
+      width: 13px;
+      margin: 0;
+      margin-right: 5px; }
+    .login .login_top .psw_login span {
+      font-size: 12px;
+      height: 20px;
+      line-height: 20px; }
   .login .login_bottom p {
     font-size: 12px;
     color: #999;
